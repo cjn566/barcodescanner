@@ -18,41 +18,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onCreate(Bundle state) {
         super.onCreate(state);
-        setContentView(R.layout.activity_main);
-        setupToolbar();
-    }
-
-    public void setupToolbar() {
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-    }
-
-    public void launchSimpleActivity(View v) {
-        launchActivity(SimpleScannerActivity.class);
-    }
-
-    public void launchSimpleFragmentActivity(View v) {
-        launchActivity(SimpleScannerFragmentActivity.class);
-    }
-
-    public void launchFullActivity(View v) {
         launchActivity(FullScannerActivity.class);
-    }
-
-    public void launchFullFragmentActivity(View v) {
-        launchActivity(FullScannerFragmentActivity.class);
-    }
-
-    public void launchFullScreenScannerFragmentActivity(View v) {
-        launchActivity(FullScreenScannerFragmentActivity.class);
-    }
-
-    public void launchCustomViewFinderScannerActivity(View v) {
-        launchActivity(CustomViewFinderScannerActivity.class);
-    }
-
-    public void launchScalingScannerActivity(View v) {
-        launchActivity(ScalingScannerActivity.class);
     }
 
     public void launchActivity(Class<?> clss) {
@@ -79,7 +45,6 @@ public class MainActivity extends AppCompatActivity {
                 } else {
                     Toast.makeText(this, "Please grant camera permission to use the QR Scanner", Toast.LENGTH_SHORT).show();
                 }
-                return;
         }
     }
 }

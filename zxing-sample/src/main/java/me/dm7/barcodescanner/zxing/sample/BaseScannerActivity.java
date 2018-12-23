@@ -12,6 +12,7 @@ public class BaseScannerActivity extends AppCompatActivity {
         final ActionBar ab = getSupportActionBar();
         if(ab != null) {
             ab.setDisplayHomeAsUpEnabled(true);
+            ab.setTitle("");
         }
     }
 

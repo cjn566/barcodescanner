@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="me.dm7.barcodescanner.zxing.sample">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="me.dm7.barcodescanner.zxing.sample">
   <uses-permission android:name="android.permission.CAMERA" />
 
-  <application android:allowBackup="true"
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <application
         android:label="@string/app_name"
-        android:icon="@drawable/ic_launcher">
+        android:icon="@drawable/ic_launcher"
+        tools:ignore="GoogleAppIndexingWarning">
         <activity android:name=".MainActivity"
                   android:theme="@style/AppTheme"
                   android:label="@string/app_name">
@@ -23,37 +27,5 @@
                        android:value="splitActionBarWhenNarrow" />
         </activity>
 
-        <activity android:name=".FullScannerFragmentActivity"
-                  android:theme="@style/AppOverlayTheme"
-                  android:uiOptions="splitActionBarWhenNarrow"
-                  android:label="@string/scanner_fragment_activity">
-            <meta-data android:name="android.support.UI_OPTIONS"
-                       android:value="splitActionBarWhenNarrow" />
-        </activity>
-
-        <activity android:name=".SimpleScannerActivity"
-                android:theme="@style/AppOverlayTheme"
-                android:label="@string/simple_scanner_activity">
-        </activity>
-
-        <activity android:name=".SimpleScannerFragmentActivity"
-                android:theme="@style/AppOverlayTheme"
-                android:label="@string/simple_scanner_fragment_activity">
-        </activity>
-
-        <activity android:name=".FullScreenScannerFragmentActivity"
-                  android:theme="@style/AppOverlayTheme"
-                android:label="@string/full_screen_scanner_fragment_activity">
-      </activity>
-
-      <activity android:name=".CustomViewFinderScannerActivity"
-                android:theme="@style/AppTheme"
-                android:label="@string/custom_view_finder_scanner_activity">
-      </activity>
-
-      <activity android:name=".ScalingScannerActivity"
-                android:theme="@style/AppTheme"
-                android:label="@string/scaling_scanner_activity">
-      </activity>
-    </application>
+  </application>
 </manifest>
